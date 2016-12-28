@@ -106,7 +106,8 @@ th {
 }
 
 html {
-  background-color: whitesmoke;
+  /*background-color:  whitesmoke; */
+  background-color:  white; 
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
