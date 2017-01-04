@@ -1788,6 +1788,7 @@ a.box:active {
   line-height: 16px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-bottom: 5px;
   vertical-align: top;
   white-space: nowrap; }
   .tag .delete {
