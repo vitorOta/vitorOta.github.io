@@ -1292,6 +1292,8 @@ a.box:active {
     top: 0;
     height: 100%;
     width: 100%; }
+  .image.is-circle img {
+    border-radius: 50%; }
   .image.is-square, .image.is-1by1 {
     padding-top: 100%; }
   .image.is-4by3 {
