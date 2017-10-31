@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- toastr -->
+    <link href="assets/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="assets/datepicker/datepicker.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="assets/style/bulma.css" />
+    <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Consultório Odontológico</title>
+
+    <style>
+        .mt-1 {
+            margin-top: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 30px;
+        }
+
+        .mt-4 {
+            margin-top: 40px;
+        }
+
+        .mt-5 {
+            margin-top: 50px;
+        }
+
+        .mt-6 {
+            margin-top: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="app-top">
+        <nav class="navbar" style="box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1);">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <div class="navbar-item " style="padding-bottom:0px;">
+                        <strong> Consultório Odontológico </strong>
+                    </div>
+                </a>
+
+                <div class="navbar-burger" data-target="navMenu" id="burguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="navbar-menu is-hidden-desktop" id="navMenu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="cadastro_dentista.html">Cadastro de Dentista</a>
+                    <a class="navbar-item" href="registro_atendimento.html">Registro de Atendimento</a>
+                    <hr class="navbar-divider" />
+                    <a class="navbar-item" href="/logout">
+                        <i class="fa fa-power-off"></i> &nbsp
+                        <strong>Sair</strong>
+                        &nbsp (Han Solo)
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <div class="navbar-link">
+                            Han Solo
+                        </div>
+
+                        <div id="moreDropdown" class="navbar-dropdown">
+                            <a class="navbar-item " href="#">
+                                <strong>Sair</strong>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div style="margin: auto 30px">
+        <div class="mt-4">
+            <div class="columns">
+
+                <aside class="column menu-container box is-2 is-hidden-mobile">
+                    <p class="menu-label">
+                        Menu
+                    </p>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <br/>
+                        <li class="menu-item">
+                            <a href="cadastro_dentista.html">
+                                Cadastro de Dentista
+                            </a>
+                        </li>
+                        <br/>
+                        <li class="menu-item">
+                            <a href="registro_atendimento.html">
+                                Registro de Atendimento
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="column h-system is-10" style="margin-top: -12px">
+
+                    <section>
+                        <a href="registro_atendimento.html">
+                            <span class="title">
+                                Registro de Atendimento
+                            </span>
+                        </a>
+                    </section>
+
+                    <section class="section">
+                        <form>
+                            <section class="is-grouped">
+                                <!--  FORMULARIO  -->
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Tratamento
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+                                        <div class="select is-fullwidth">
+                                            <select id="idtrat">
+                                                <option value="-1">Selecione o tratamento</option>
+                                                <option>Ortodontia</option>
+                                                <option>Dentística</option>
+                                                <option>Implantodontia</option>
+                                                <option>Prótese</option>
+                                                <option>Clínico Geral</option>
+                                                <option>Odontopediatria</option>
+                                                <option>Periodontia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Procedimento
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+                                        <div class="select is-fullwidth">
+                                            <select id="idproc">
+                                                <option value="-1">Selecione o procedimento</option>
+                                                <option>Clareamento dental</option>
+                                                <option>Cirurgia ortognática</option>
+                                                <option>Selante dental</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Valor
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input id="idvalor" class="input" required/>
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Situação
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+                                        <p class="field control">
+
+                                            <label class="radio">
+                                                <input type="radio" name="answer" checked> Em andamento
+                                            </label>
+
+                                            <label class="radio">
+                                                <input type="radio" name="answer"> Realizada
+                                            </label>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Data Prevista
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="field-body">
+                                        <p class="field control">
+                                            <input id="dtprev" class="input" data-toggle="datepicker" />
+                                            <p>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Data de Realização
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+                                    <div class="field-body">
+                                        <p class="field control">
+                                            <input id="dtreal" class="input" data-toggle="datepicker" />
+                                            <p>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">Descrição do Atendimento</label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <textarea id="idtxt" rows="6" cols="95"> </textarea>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!--  FIM FORMULARIO  -->
+                            </section>
+
+                            <br/>
+
+                            <section>
+                                <p>
+                                    <span class="has-text-danger">*</span> Campos obrigatórios
+                                </p>
+
+                                <div class="field is-grouped pull-right">
+                                    <p class="control">
+                                        <a class="button is-text" href="index.html">
+                                            Cancelar
+                                        </a>
+                                    </p>
+
+                                    <p class="control">
+                                        <button class="button is-link" type="submit">
+                                            <i class="fa fa-save"></i>&nbsp Salvar
+                                        </button>
+                                    </p>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-6">
+        <div class="container">
+            <div class="container">
+                <div class="has-text-centered">
+                    <p>
+                        <strong>Trabalho IHM &copy; 2017</strong>
+                    </p>
+                    <p>Dilan Kenner - Patrick Dumont - Vitor Ota</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/jquery.mask.min.js"></script>
+    <script src="assets/datepicker/datepicker.min.js"></script>
+    <script src="assets/toastr/toastr.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            document.getElementById('burguer').onclick = function (e) {
+                this.classList.toggle('is-active');
+                document.getElementById(this.dataset.target).classList.toggle('is-active');
+            }
+
+            $('#idvalor').mask("#.##0,00", { reverse: true, placeholder: "00,00" })
+            //TODO fix input type date
+            $('#dtprev').mask("00/00/0000", { reverse: true, placeholder: "dd/MM/aaaa" })
+            $('#dtreal').mask("00/00/0000", { reverse: true, placeholder: "dd/MM/aaaa" })
+
+            $('[data-toggle="datepicker"]').datepicker({
+                format: "dd/mm/yyyy"
+            });
+
+
+            $("#form").submit(function () {
+                var error = false;
+                
+                toastr.clear();
+                var idproc = document.getElementById("idproc");
+                if (idproc.value === "-1") {
+                    error=true;
+                    toastr.warning("Selecione um Procedimento");
+                }
+
+                var idtrat = document.getElementById("idtrat");
+                if (idtrat.value === "-1") {
+                    error=true;
+                    toastr.warning("Selecione um Tratamento");
+                }
+
+
+                var idvalor = document.getElementById("idvalor");
+                if (idvalor.value == "") {
+                    error=true;
+                    toastr.warning("Informe o Valor");
+                }
+
+
+                var dtprev = document.getElementById("dtprev");
+                if (dtprev.value == "") {
+                    error=true;
+                    toastr.warning("Informe a Data Prevista");
+                }
+
+                var dtreal = document.getElementById("dtreal");
+                if (dtreal.value == "") {
+                    error=true;
+                    toastr.warning("Informe a Data de Realização");
+                }
+
+                if(!error){
+                    alert("Registro de Atendimento salvo !");
+                }
+
+                return !error;
+            });
+
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

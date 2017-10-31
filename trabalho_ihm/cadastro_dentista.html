@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- toastr -->
+    <link href="assets/toastr/toastr.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/style/bulma.css" />
+    <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Consultório Odontológico</title>
+
+    <style>
+        .mt-1 {
+            margin-top: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 20px;
+        }
+
+        .mt-3 {
+            margin-top: 30px;
+        }
+
+        .mt-4 {
+            margin-top: 40px;
+        }
+
+        .mt-5 {
+            margin-top: 50px;
+        }
+
+        .mt-6 {
+            margin-top: 60px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header id="app-top">
+        <nav class="navbar" style="box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1);">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <div class="navbar-item " style="padding-bottom:0px;">
+                        <strong> Consultório Odontológico </strong>
+                    </div>
+                </a>
+
+                <div class="navbar-burger" data-target="navMenu" id="burguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="navbar-menu is-hidden-desktop" id="navMenu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="cadastro_dentista.html">Cadastro de Dentista</a>
+                    <a class="navbar-item" href="registro_atendimento.html">Registro de Atendimento</a>
+                    <br class="navbar-divider" />
+                    <a class="navbar-item" href="/logout">
+                        <i class="fa fa-power-off"></i> &nbsp
+                        <strong>Sair</strong>
+                        &nbsp (Han Solo)
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-menu" id="navMenu">
+                <div class="navbar-end">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <div class="navbar-link">
+                            Han Solo
+                        </div>
+
+                        <div id="moreDropdown" class="navbar-dropdown">
+                            <a class="navbar-item " href="#">
+                                <strong>Sair</strong>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div style="margin: auto 30px">
+        <div class="mt-4">
+            <div class="columns">
+
+                <aside class="column menu-container box is-2 is-hidden-mobile">
+                    <p class="menu-label">
+                        Menu
+                    </p>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <br/>
+                        <li class="menu-item">
+                            <a href="cadastro_dentista.html">
+                                Cadastro de Dentista
+                            </a>
+                        </li>
+                        <br/>
+                        <li class="menu-item">
+                            <a href="registro_atendimento.html">
+                                Registro de Atendimento
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <section class="column h-system is-10" style="margin-top: -12px">
+
+                    <section>
+                        <a href="cadastro_dentista.html">
+                            <span class="title">
+                                Cadastro de Dentista
+                            </span>
+                        </a>
+                    </section>
+
+
+                    <section class="section">
+                        <form id="form">
+                            <section class="is-grouped">
+                                <!--  FORMULARIO  -->
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lNome" class="label">Nome
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="nome" type="text" name="nome" value="" data-label="lNome" />
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lCro" class="label">CRO
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="cro" type="text" name="cro" value="" data-label="lCro" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <br>
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lCEP" class="label">CEP
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="CEP" type="text" name="CEP" value="" data-label="lCEP" />
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lNome" class="label">Cidade
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+                                        <div class="select is-fullwidth">
+                                            <select id="cidade">
+                                                <option value="-1">Selecione uma Cidade</option>
+                                                <option>Coronel Fabriciano</option>
+                                                <option>Timoteo</option>
+                                                <option>Ipatinga</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lBairro" class="label">Bairro
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="bairro" type="text" name="bairro" value="" data-label="lBairro" />
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lRua" class="label">Rua
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="rua" type="text" name="rua" value="" data-label="lRua" />
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lNumero" class="label">Número
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="numero" type="number" value="" data-label="lNumber" />
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lComplemento" class="label">Complemento</label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="complemento" type="text" name="complemento" value="" data-label="lComplemento" />
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lResidencial" class="label">Tel. Residencial</label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="residencial" type="text" name="residencial" value="" data-label="lresidencial" />
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lCelular" class="label">Celular
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="celular" type="tel" name="celular" value="" data-label="lCelular" />
+                                        </p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label id="lEmail" class="label">Email
+                                            <span class="has-text-danger">*</span>
+                                        </label>
+                                    </div>
+
+                                    <div class="field-body">
+
+                                        <p class="field control">
+                                            <input class="input" id="email" type="email" name="email" value="" data-label="lEmail" />
+                                        </p>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <!--  FIM FORMULARIO  -->
+                            </section>
+
+                            <br/>
+
+                            <section>
+                                <p>
+                                    <span class="has-text-danger">*</span> Campos obrigatórios
+                                </p>
+
+                                <div class="field is-grouped pull-right">
+                                    <p class="control">
+                                        <a class="button is-text" href="index.html">
+                                            Cancelar
+                                        </a>
+                                    </p>
+
+                                    <p class="control">
+                                        <button class="button is-link" type="submit">
+                                            <i class="fa fa-save"></i>&nbsp Salvar
+                                        </button>
+                                    </p>
+                                </div>
+                            </section>
+                        </form>
+                    </section>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-6">
+        <div class="container">
+            <div class="container">
+                <div class="has-text-centered">
+                    <p>
+                        <strong>Trabalho IHM &copy; 2017</strong>
+                    </p>
+                    <p>Dilan Kenner - Patrick Dumont - Vitor Ota</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/jquery.mask.min.js"></script>
+    <script src="assets/toastr/toastr.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            document.getElementById('burguer').onclick = function (e) {
+                this.classList.toggle('is-active');
+                document.getElementById(this.dataset.target).classList.toggle('is-active');
+            }
+
+            $("#CEP").mask("00000-000", { placeholder: "00000-000" });
+            $("#residencial").mask("(00) 0000-0000", { placeholder: "(00) 0000-0000" });
+            $("#celular").mask("(00) 0 0000-0000", { placeholder: "(00) 0 0000-0000" });
+
+
+            $("#form").submit(function () {
+                var error = false;
+
+
+                toastr.clear();
+
+                var nome = document.getElementById("nome");
+                if (nome.value == "") {
+                    error = true;
+                    toastr.warning("Informe o Nome");
+                }
+
+
+                var cro = document.getElementById("cro");
+                if (cro.value == "") {
+                    error = true;
+                    toastr.warning("Informe o CRO");
+                }
+
+
+                var cep = document.getElementById("CEP");
+                if (cep.value == "") {
+                    error = true;
+                    toastr.warning("Informe o CEP");
+                }
+
+
+                var cidade = document.getElementById("cidade");
+                if (cidade.value === "-1") {
+                    error = true;
+                    toastr.warning("Selecione a Cidade");
+                }
+
+
+                var bairro = document.getElementById("bairro");
+                if (bairro.value == "") {
+                    error = true;
+                    toastr.warning("Informe o Bairro");
+                }
+
+
+                var rua = document.getElementById("rua");
+                if (rua.value == "") {
+                    error = true;
+                    toastr.warning("Informe a Rua");
+                }
+
+                var numero = document.getElementById("numero");
+                if (numero.value == "" || numero.value < 1) {
+                    error = true;
+                    toastr.warning("Informe um Número válido");
+                }
+
+
+                var celular = document.getElementById("celular");
+                if (celular.value == "") {
+                    error = true;
+                    toastr.warning("Informe o Celular");
+                }
+
+                var email = document.getElementById("email");
+                if (email.value == "") {
+                    error = true;
+                    toastr.warning("Informe o Email");
+                }
+
+                if (!error) {
+                    alert("Dentista Cadastrado !");
+                }
+
+                return !error;
+            });
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
