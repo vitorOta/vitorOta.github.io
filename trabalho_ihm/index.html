@@ -10,8 +10,9 @@
     <link href="assets/toastr/toastr.min.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="assets/style/bulma.css" />
+    <link rel="stylesheet" href="assets/datatables-bulma/css/dataTables.bulma.min.css" />
     <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Consultório Odontológico</title>
+    <title>Imóveis</title>
 
     <style>
         .mt-1 {
@@ -48,7 +49,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
                     <div class="navbar-item " style="padding-bottom:0px;">
-                        <strong> Consultório Odontológico </strong>
+                        <strong>Venda / Aluguel de Imóveis</strong>
                     </div>
                 </a>
 
@@ -61,14 +62,12 @@
 
             <div class="navbar-menu is-hidden-desktop" id="navMenu">
                 <div class="navbar-end">
-                    <a class="navbar-item" href="index.html">Home</a>
-                    <a class="navbar-item" href="cadastro_dentista.html">Cadastro de Dentista</a>
-                    <a class="navbar-item" href="registro_atendimento.html">Registro de Atendimento</a>
+                    <a class="navbar-item" href="index.html">Imóveis</a>
                     <hr class="navbar-divider" />
                     <a class="navbar-item" href="/logout">
                         <i class="fa fa-power-off"></i> &nbsp
                         <strong>Sair</strong>
-                        &nbsp (Han Solo)
+                        &nbsp (Anakin Skywalker)
                     </a>
                 </div>
             </div>
@@ -77,7 +76,7 @@
                 <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
                         <div class="navbar-link">
-                            Han Solo
+                            Anakin Skywalker
                         </div>
 
                         <div id="moreDropdown" class="navbar-dropdown">
@@ -105,20 +104,7 @@
                     <ul class="menu">
                         <li class="menu-item">
                             <a href="index.html">
-                                Home
-                            </a>
-                        </li>
-
-                        <br/>
-                        <li class="menu-item">
-                            <a href="cadastro_dentista.html">
-                                Cadastro de Dentista
-                            </a>
-                        </li>
-                        <br/>
-                        <li class="menu-item">
-                            <a href="registro_atendimento.html">
-                                Registro de Atendimento
+                                Imóveis
                             </a>
                         </li>
                     </ul>
@@ -129,13 +115,57 @@
                     <section>
                         <a href="index.html">
                             <span class="title">
-                                Home
+                                Imóveis
                             </span>
                         </a>
                     </section>
-                    <!-- <section class="section">
-                        <marquee>Mensagem motivacional</marquee>
-                    </section> -->
+                    <section class="section">
+                        
+                        <table class="table stripe">  
+                            <thead>
+                                <tr>
+                                    <th>Endereço</th>
+                                    <th>Tipo</th>
+                                    <th>Nº de Quartos</th>
+                                    <th  class="no-sort"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>Rua Tal etc</td>
+                                    <td>Apartamento</td>
+                                    <td> 2 </td>
+                                    <td>
+                                        <div class="field is-grouped">
+                        
+                                            <p class="control">
+                                                <a title="Visualizar" class="button is-small is-info" href="#">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                            </p>
+                        
+                                            <p class="control">
+                                                <a title="Editar" class="button is-small is-warning" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </p>
+                        
+                                            <p class="control">
+                                                <a title="Excluir" class="button is-small is-danger" href="#">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+
+                                
+                            </tbody>
+                        </table>
+
+                    </section>
 
                 </section>
 
@@ -150,7 +180,7 @@
                     <p>
                         <strong>Trabalho IHM &copy; 2017</strong>
                     </p>
-                    <p>Dilan Kenner - Patrick Dumont - Vitor Ota</p>
+                    <p>Patrick Dumont - Vitor Ota</p>
                 </div>
             </div>
         </div>
@@ -158,15 +188,32 @@
 
 
     <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/DataTables/datatables.min.js" />
+    <script src="assets/datatables-bulma/js/dataTables.bulma.min.js" />
     <script src="assets/toastr/toastr.min.js"></script>
 
     <script>
+        
         document.getElementById('burguer').onclick = function (e) {
             this.classList.toggle('is-active');
             document.getElementById(this.dataset.target).classList.toggle('is-active');
         }
 
-        
+        $('.table').DataTable({
+            "responsive":true,
+            
+            "columnDefs":[
+                {
+                    "targets": 'no-sort',
+                    "orderable": false,
+                    "order":[]
+                }
+            ],
+
+             "language": {
+                "url":"/datatableStrings.json"
+            }
+        });
 
 
     </script>
