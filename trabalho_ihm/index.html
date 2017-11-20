@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- toastr -->
-    <link href="assets/toastr/toastr.min.css" rel="stylesheet"/>
+    <link href="assets/toastr/toastr.min.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="assets/style/bulma.css" />
     <link rel="stylesheet" href="assets/datatables-bulma/css/dataTables.bulma.min.css" />
     <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Imóveis</title>
+    <title>Imóveis Vale do Aço</title>
 
     <style>
         .mt-1 {
@@ -49,7 +49,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
                     <div class="navbar-item " style="padding-bottom:0px;">
-                        <strong>Venda / Aluguel de Imóveis</strong>
+                        <strong>Imóveis Vale do Aço</strong>
                     </div>
                 </a>
 
@@ -81,6 +81,7 @@
 
                         <div id="moreDropdown" class="navbar-dropdown">
                             <a class="navbar-item " href="#">
+                                <i class="fa fa-power-off"></i> &nbsp
                                 <strong>Sair</strong>
                             </a>
 
@@ -97,7 +98,7 @@
         <div class="mt-4">
             <div class="columns">
 
-                <aside class="column menu-container box is-2 is-hidden-mobile">
+                <!-- <aside class="column menu-container box is-2 is-hidden-mobile">
                     <p class="menu-label">
                         Menu
                     </p>
@@ -108,9 +109,9 @@
                             </a>
                         </li>
                     </ul>
-                </aside>
+                </aside> -->
 
-                <section class="column h-system is-10" style="margin-top: -12px">
+                <section class="column h-system is-12" style="margin-top: -12px">
 
                     <section>
                         <a href="index.html">
@@ -120,37 +121,161 @@
                         </a>
                     </section>
                     <section class="section">
-                        
-                        <table class="table stripe">  
+                        <section class="is-grouped">
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label id="lNome" class="label">Endereço:
+                                    </label>
+                                </div>
+
+                                <div class="field-body">
+                                    <div class="select">
+                                        <select id="cidade">
+                                            <option>Todas as Cidades</option>
+                                            <option>Coronel Fabriciano</option>
+                                            <option>Timoteo</option>
+                                            <option>Ipatinga</option>
+
+                                        </select>
+                                    </div>
+
+                                    &nbsp;&nbsp;
+
+                                    <div class="select">
+                                        <select id="bairro">
+                                            <option>Todos os Bairros</option>
+                                            <option>Iguaçu</option>
+                                            <option>Alegre</option>
+                                        </select>
+                                    </div>
+
+                                    &nbsp;&nbsp;
+
+
+                                    <div class="select">
+                                        <select id="rua">
+                                            <option>Todas as Ruas</option>
+                                            <option>Rua Tal</option>
+                                            <option>Rua Outra</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+                                    <label id="lNome" class="label">Tipo:
+                                    </label>
+                                </div>
+
+                                <div class="field-body">
+                                    <div class="buttons has-addons">
+                                        <span class="toggle button is-info is-selected">Casa</span>
+                                        <span class="toggle button is-info is-selected">Apartamento</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="field is-horizontal">
+                                <div class="field-label is-normal">
+
+                                </div>
+
+                                <div class="field-body">
+                                    <div class="field is-grouped">
+                                        <p class="control">
+                                            <button class="button is-primary">
+                                                <i class="fa fa-filter"></i>&nbsp Filtrar
+                                            </button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </section>
+
+                        <br/>
+                        <br/>
+
+                        <table class="table stripe" width="100%">
                             <thead>
                                 <tr>
+                                    <th>Cidade</th>
+                                    <th>Bairro</th>
                                     <th>Endereço</th>
                                     <th>Tipo</th>
+                                    <th>Tamanho (m²)</th>
                                     <th>Nº de Quartos</th>
-                                    <th  class="no-sort"></th>
+                                    <th>Aluguel ?</th>
+                                    <th>Venda ?</th>
+                                    <th class="no-sort"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    
-                                    <td>Rua Tal etc</td>
+                                    <td>Ipatinga</td>
+                                    <td>Iguaçu</td>
+                                    <td>Rua Tal, nº 100</td>
+
                                     <td>Apartamento</td>
+                                    <td>100 m²</td>
                                     <td> 2 </td>
+                                    <td>Sim</td>
+                                    <td>Sim</td>
                                     <td>
                                         <div class="field is-grouped">
-                        
+
                                             <p class="control">
                                                 <a title="Visualizar" class="button is-small is-info" href="#">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
                                             </p>
-                        
+
                                             <p class="control">
                                                 <a title="Editar" class="button is-small is-warning" href="#">
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
                                             </p>
-                        
+
+                                            <p class="control">
+                                                <a title="Excluir" class="button is-small is-danger" href="#">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Timóteo</td>
+                                    <td>Alegre</td>
+                                    <td>Rua OutraTal, nº 200</td>
+
+                                    <td>Casa</td>
+                                    <td>300 m²</td>
+                                    <td> 3 </td>
+                                    <td>Sim</td>
+                                    <td>Não</td>
+                                    <td>
+                                        <div class="field is-grouped">
+
+                                            <p class="control">
+                                                <a title="Visualizar" class="button is-small is-info" href="#">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                            </p>
+
+                                            <p class="control">
+                                                <a title="Editar" class="button is-small is-warning" href="#">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>
+                                            </p>
+
                                             <p class="control">
                                                 <a title="Excluir" class="button is-small is-danger" href="#">
                                                     <i class="fa fa-trash"></i>
@@ -161,7 +286,6 @@
                                 </tr>
 
 
-                                
                             </tbody>
                         </table>
 
@@ -193,28 +317,35 @@
     <script src="assets/toastr/toastr.min.js"></script>
 
     <script>
-        
+
         document.getElementById('burguer').onclick = function (e) {
             this.classList.toggle('is-active');
             document.getElementById(this.dataset.target).classList.toggle('is-active');
         }
 
         $('.table').DataTable({
-            "responsive":true,
-            
-            "columnDefs":[
+            "responsive": true,
+
+            "columnDefs": [
                 {
                     "targets": 'no-sort',
                     "orderable": false,
-                    "order":[]
+                    "order": []
                 }
             ],
 
-             "language": {
-                "url":"/datatableStrings.json"
+            "language": {
+                "url": "/datatableStrings.json"
             }
         });
 
+        $('.toggle').click(function (e) {
+            if ($(this).hasClass("is-info")) {
+                $(this).removeClass("is-info is-selected");
+            } else {
+                $(this).addClass("is-info is-selected");
+            }
+        })
 
     </script>
 
