@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="assets/style/bulma.css" />
     <link rel="stylesheet" href="assets/datatables-bulma/css/dataTables.bulma.min.css" />
     <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
     <title>Imóveis Vale do Aço</title>
     <style>
         .mt-1 {
@@ -271,9 +273,13 @@
 
                                     <div class="field is-horizontal">
                                         <div class="field-label is-normal">
+                                                <div class="ui-widget">
+                                                        
+                                                      
                                             <label id="lNome" class="label">Título
                                                 <span class="has-text-danger">*</span>
                                             </label>
+                                        </div>
                                         </div>
 
                                         <div class="field-body">
@@ -426,12 +432,14 @@
     <script src="assets/jquery-3.2.1.min.js"></script>
     <script src="assets/toastr/toastr.min.js"></script>
 
-
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         document.getElementById('burguer').onclick = function (e) {
             this.classList.toggle('is-active');
             document.getElementById(this.dataset.target).classList.toggle('is-active');
         }
+
+        $('#titulo').autocomplete({source: ['Casa','Fortaleza','Apartamento','Cobertura','Kitnet','Montanha']});
 
 
         $('.toggle').click(function (e) {
