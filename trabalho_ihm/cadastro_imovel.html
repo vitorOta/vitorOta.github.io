@@ -105,7 +105,7 @@
                     <section class="section">
 
 
-                        <form id="form">
+                        <!-- <form id="form"> -->
                             <section class="is-grouped">
                                 <!--  FORMULARIO  -->
 
@@ -125,7 +125,7 @@
                                             <div class="field is-narrow">
                                                 <div class="control">
                                                     <label class="radio">
-                                                        <input type="radio" name="tipo"> Casa
+                                                        <input type="radio" name="tipo" checked> Casa
                                                     </label>
                                                     <label class="radio">
                                                         <input type="radio" name="tipo"> Apartamento
@@ -147,7 +147,6 @@
                                         <div class="field-body">
                                             <div class="select is-fullwidth">
                                                 <select id="cidade">
-                                                    <option value="-1">Selecione uma Cidade</option>
                                                     <option>Coronel Fabriciano</option>
                                                     <option>Timoteo</option>
                                                     <option>Ipatinga</option>
@@ -167,10 +166,14 @@
                                         </div>
 
                                         <div class="field-body">
+                                            <div class="select is-fullwidth">
+                                                <select id="bairro">
+                                                    <option>Mordor</option>
+                                                    <option>Isengard</option>
+                                                    <option>Condado</option>
 
-                                            <p class="field control">
-                                                <input class="input" id="bairro" type="text" name="bairro" value="" data-label="lBairro" />
-                                            </p>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -183,10 +186,13 @@
                                         </div>
 
                                         <div class="field-body">
-
-                                            <p class="field control">
-                                                <input class="input" id="rua" type="text" name="rua" value="" data-label="lRua" />
-                                            </p>
+                                            <div class="select is-fullwidth">
+                                                <select id="rua">
+                                                    <option>Rua Xpto</option>
+                                                    <option>Rua Tal</option>
+                                                    <option>Rua Doe</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -249,7 +255,7 @@
                                         <div class="field-body">
 
                                             <p class="field control">
-                                                <input class="input" id="area" type="number" min="0" name="celular" value="" data-label="lCelular" />
+                                                <input class="input" id="numeroDeQuartos" type="number" min="0" value="" data-label="lCelular" />
                                             </p>
                                         </div>
                                     </div>
@@ -273,29 +279,28 @@
                                         <div class="field-body">
 
                                             <p class="field control">
-                                                <input class="input" id="titulo" type="text" name="nome" value="" data-label="lNome" />
+                                                <input class="input" id="titulo" type="text" placeholder="Título do Anúncio" data-label="lNome" />
                                             </p>
                                         </div>
                                     </div>
 
 
                                     <div class="field is-horizontal">
-                                            <div class="field-label is-normal">
-                                                <label id="lNome" class="label">Descrição
-                                                    <span class="has-text-danger">*</span>
-                                                </label>
-                                            </div>
-        
-                                            <div class="field-body">
-        
-                                                <p class="field control">
-                                                    <input class="input" id="titulo" type="text" name="nome" value="" data-label="lNome" />
-                                                </p>
-                                            </div>
+                                        <div class="field-label is-normal">
+                                            <label id="lNome" class="label">Descrição
+                                            </label>
                                         </div>
 
+                                        <div class="field-body">
 
-                                    <div class="field is-horizontal">
+                                            <p class="field control">
+                                                <input class="input" type="text" value="" data-label="lNome" />
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- <div class="field is-horizontal">
                                         <div class="field-label is-normal">
                                             <label id="lCelular" class="label">Valor (R$)
                                                 <span class="has-text-danger">*</span>
@@ -305,11 +310,70 @@
                                         <div class="field-body">
 
                                             <p class="field control">
-                                                <input class="input" id="area" type="number" min="0" name="celular" value="" data-label="lCelular" />
+                                                <input class="input" id="valor" type="number" min="0" placeholder="0,00" data-label="lCelular" />
                                             </p>
+                                        </div>
+                                    </div> -->
+
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label">
+                                            <label class="label">Disponível para</label>
+                                        </div>
+                                        <div class="field-body">
+
+                                            <div class="field is-grouped">
+                                                <div class="buttons has-addons">
+                                                    <span class="toggle button ">Alugar</span>
+                                                    <span class="toggle button ">Comprar</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lNome" class="label">Fotos
+                                            </label>
+                                        </div>
+
+                                        <div class="field-body">
+                                            <div class="file">
+                                                <label class="file-label">
+                                                    <input class="file-input" type="file" name="resume">
+                                                    <span class="file-cta">
+                                                        <span class="file-icon">
+                                                            <i class="fa fa-upload"></i>
+                                                        </span>
+                                                        <span class="file-label">
+                                                            Adicionar Imagem…
+                                                        </span>
+                                                    </span>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                        </div>
+
+                                        <div class="field-body">
+                                            <div class="field is-grouped">
+                                                <figure class="image is-256x256">
+                                                    <img src="https://bulma.io/images/placeholders/256x256.png">
+                                                </figure>
+                                                &nbsp
+                                                <figure class="image is-256x256">
+                                                    <img src="https://bulma.io/images/placeholders/256x256.png">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div> -->
 
                                 </div>
 
@@ -327,22 +391,19 @@
                                 <div class="field is-grouped pull-right">
                                     <p class="control">
                                         <a class="button is-text" href="index.html">
-                                            <i class="fa fa-arrow-left"></i> &nbsp; Cancelar
+                                            <!-- <i class="fa fa-arrow-left"></i>  -->
+                                            &nbsp; Voltar &nbsp;
                                         </a>
                                     </p>
 
                                     <p class="control">
-                                        <button class="button is-link" type="submit">
+                                        <button id="bSubmit" class="button is-link">
                                             <i class="fa fa-save"></i>&nbsp Salvar
                                         </button>
                                     </p>
                                 </div>
                             </section>
-                        </form>
-
-
-
-
+                        <!-- </form> -->
 
 
                     </section>
@@ -363,39 +424,70 @@
         </div>
     </footer>
     <script src="assets/jquery-3.2.1.min.js"></script>
-    <script src="assets/DataTables/datatables.min.js" />
-    <script src="assets/datatables-bulma/js/dataTables.bulma.min.js" />
     <script src="assets/toastr/toastr.min.js"></script>
-    <script>
 
+
+    <script>
         document.getElementById('burguer').onclick = function (e) {
             this.classList.toggle('is-active');
             document.getElementById(this.dataset.target).classList.toggle('is-active');
         }
 
-        $('.table').DataTable({
-            "responsive": true,
-
-            "columnDefs": [
-                {
-                    "targets": 'no-sort',
-                    "orderable": false,
-                    "order": []
-                }
-            ],
-
-            "language": {
-                "url": "/datatableStrings.json"
-            }
-        });
 
         $('.toggle').click(function (e) {
             if ($(this).hasClass("is-primary")) {
-                $(this).removeClass("is-primary is-selected");
+                $(this).removeClass("is-primary ");
             } else {
-                $(this).addClass("is-primary is-selected");
+                $(this).addClass("is-primary ");
             }
         })
+
+
+        $("#bSubmit").click(function () {
+            var error = false;
+
+            toastr.clear();
+
+            var numero = document.getElementById("numero");
+            if (numero.value == "") {
+                error = true;
+                toastr.warning("Informe o Número");
+            }
+
+            var area = document.getElementById("area");
+            if (area.value == "") {
+                error = true;
+                toastr.warning("Informe a Área do Imóvel");
+            }
+
+            var numeroDeQuartos = document.getElementById("numeroDeQuartos");
+            if (numeroDeQuartos.value == "") {
+                error = true;
+                toastr.warning("Informe o Número de Quartos");
+            }
+
+            var titulo = document.getElementById("titulo");
+            if (titulo.value == "") {
+                error = true;
+                toastr.warning("Informe o Título do Anúncio");
+            }
+
+            // var valor = document.getElementById("valor");
+            // if (valor.value == "") {
+            //     error = true;
+            //     toastr.warning("Informe o Valor");
+            // }
+
+
+            if (!error) {
+                alert("Anunciado !");
+                window.location.replace("index.html")
+            }
+
+
+//            return !error;
+        });
+
 
     </script>
 </body>
