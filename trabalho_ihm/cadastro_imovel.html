@@ -1,142 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- toastr -->
     <link href="assets/toastr/toastr.min.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="assets/style/bulma.css" />
+    <link rel="stylesheet" href="assets/datatables-bulma/css/dataTables.bulma.min.css" />
     <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Consultório Odontológico</title>
-
+    <title>Imóveis Vale do Aço</title>
     <style>
-        .mt-1 {
-            margin-top: 10px;
-        }
+    .mt-1 {
+        margin-top: 10px;
+    }
 
-        .mt-2 {
-            margin-top: 20px;
-        }
+    .mt-2 {
+        margin-top: 20px;
+    }
 
-        .mt-3 {
-            margin-top: 30px;
-        }
+    .mt-3 {
+        margin-top: 30px;
+    }
 
-        .mt-4 {
-            margin-top: 40px;
-        }
+    .mt-4 {
+        margin-top: 40px;
+    }
 
-        .mt-5 {
-            margin-top: 50px;
-        }
+    .mt-5 {
+        margin-top: 50px;
+    }
 
-        .mt-6 {
-            margin-top: 60px;
-        }
-    </style>
-
+    .mt-6 {
+        margin-top: 60px;
+    }
+</style>
 </head>
-
 <body>
-
     <header id="app-top">
         <nav class="navbar" style="box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1);">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
                     <div class="navbar-item " style="padding-bottom:0px;">
-                        <strong> Consultório Odontológico </strong>
+                        <strong>Imóveis Vale do Aço</strong>
                     </div>
                 </a>
-
                 <div class="navbar-burger" data-target="navMenu" id="burguer">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-
             <div class="navbar-menu is-hidden-desktop" id="navMenu">
                 <div class="navbar-end">
-                    <a class="navbar-item" href="index.html">Home</a>
-                    <a class="navbar-item" href="cadastro_dentista.html">Cadastro de Dentista</a>
-                    <a class="navbar-item" href="registro_atendimento.html">Registro de Atendimento</a>
-                    <br class="navbar-divider" />
+                    <a class="navbar-item" href="index.html">Imóveis</a>
+                    <hr class="navbar-divider" />
                     <a class="navbar-item" href="/logout">
                         <i class="fa fa-power-off"></i> &nbsp
+                        
                         <strong>Sair</strong>
-                        &nbsp (Han Solo)
+                        &nbsp (Anakin Skywalker)
+                        
                     </a>
                 </div>
             </div>
-
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
                         <div class="navbar-link">
-                            Han Solo
+                            Anakin Skywalker
                         </div>
-
                         <div id="moreDropdown" class="navbar-dropdown">
                             <a class="navbar-item " href="#">
+                                <i class="fa fa-power-off"></i> &nbsp
+                                
                                 <strong>Sair</strong>
                             </a>
-
                         </div>
                     </div>
                 </div>
             </div>
-
         </nav>
     </header>
-
-
     <div style="margin: auto 30px">
         <div class="mt-4">
             <div class="columns">
-
-                <aside class="column menu-container box is-2 is-hidden-mobile">
-                    <p class="menu-label">
+                                    <!-- <aside class="column menu-container box is-2 is-hidden-mobile"><p class="menu-label">
                         Menu
-                    </p>
-                    <ul class="menu">
-                        <li class="menu-item">
-                            <a href="index.html">
-                                Home
-                            </a>
-                        </li>
+                    </p><ul class="menu"><li class="menu-item"><a href="index.html">
+                                Imóveis
+                            </a></li></ul></aside> -->
+                            <section class="column h-system is-12" style="margin-top: -12px">
+                                <section>
+                                    <a href="index.html">
+                                        <span class="title">
+                                            Imóveis - Novo Anúncio
+                                        </span>
+                                    </a>
+                                    
+                                    
+                                </section>
+                                <section class="section">
+                                   
 
-                        <br/>
-                        <li class="menu-item">
-                            <a href="cadastro_dentista.html">
-                                Cadastro de Dentista
-                            </a>
-                        </li>
-                        <br/>
-                        <li class="menu-item">
-                            <a href="registro_atendimento.html">
-                                Registro de Atendimento
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-
-                <section class="column h-system is-10" style="margin-top: -12px">
-
-                    <section>
-                        <a href="cadastro_dentista.html">
-                            <span class="title">
-                                Cadastro de Dentista
-                            </span>
-                        </a>
-                    </section>
-
-
-                    <section class="section">
-                        <form id="form">
+<form id="form">
                             <section class="is-grouped">
                                 <!--  FORMULARIO  -->
 
@@ -334,7 +301,7 @@
                                 <div class="field is-grouped pull-right">
                                     <p class="control">
                                         <a class="button is-text" href="index.html">
-                                            Cancelar
+                                            <i class="fa fa-arrow-left"></i> &nbsp; Cancelar
                                         </a>
                                     </p>
 
@@ -346,121 +313,64 @@
                                 </div>
                             </section>
                         </form>
-                    </section>
 
-                </section>
 
-            </div>
-        </div>
-    </div>
 
-    <footer class="footer mt-6">
-        <div class="container">
-            <div class="container">
-                <div class="has-text-centered">
-                    <p>
-                        <strong>Trabalho IHM &copy; 2017</strong>
-                    </p>
-                    <p>Dilan Kenner - Patrick Dumont - Vitor Ota</p>
+
+
+
+                                </section>
+                            </section>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </footer>
+                <footer class="footer mt-6">
+                    <div class="container">
+                        <div class="container">
+                            <div class="has-text-centered">
+                                <p>
+                                    <strong>Trabalho IHM &copy; 2017</strong>
+                                </p>
+                                <p>Patrick Dumont - Vitor Ota</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <script src="assets/jquery-3.2.1.min.js"></script>
+                <script src="assets/DataTables/datatables.min.js" />
+                <script src="assets/datatables-bulma/js/dataTables.bulma.min.js" />
+                <script src="assets/toastr/toastr.min.js"></script>
+                <script>
 
-    <script src="assets/jquery-3.2.1.min.js"></script>
-    <script src="assets/jquery.mask.min.js"></script>
-    <script src="assets/toastr/toastr.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            document.getElementById('burguer').onclick = function (e) {
-                this.classList.toggle('is-active');
-                document.getElementById(this.dataset.target).classList.toggle('is-active');
-            }
+                    document.getElementById('burguer').onclick = function (e) {
+                        this.classList.toggle('is-active');
+                        document.getElementById(this.dataset.target).classList.toggle('is-active');
+                    }
 
-            $("#CEP").mask("00000-000", { placeholder: "00000-000" });
-            $("#residencial").mask("(00) 0000-0000", { placeholder: "(00) 0000-0000" });
-            $("#celular").mask("(00) 0 0000-0000", { placeholder: "(00) 0 0000-0000" });
+                    $('.table').DataTable({
+                        "responsive": true,
 
+                        "columnDefs": [
+                        {
+                            "targets": 'no-sort',
+                            "orderable": false,
+                            "order": []
+                        }
+                        ],
 
-            $("#form").submit(function () {
-                var error = false;
+                        "language": {
+                            "url": "/datatableStrings.json"
+                        }
+                    });
 
+                    $('.toggle').click(function (e) {
+                        if ($(this).hasClass("is-primary")) {
+                            $(this).removeClass("is-primary is-selected");
+                        } else {
+                            $(this).addClass("is-primary is-selected");
+                        }
+                    })
 
-                toastr.clear();
-
-                var nome = document.getElementById("nome");
-                if (nome.value == "") {
-                    error = true;
-                    toastr.warning("Informe o Nome");
-                }
-
-
-                var cro = document.getElementById("cro");
-                if (cro.value == "") {
-                    error = true;
-                    toastr.warning("Informe o CRO");
-                }
-
-
-                var cep = document.getElementById("CEP");
-                if (cep.value == "") {
-                    error = true;
-                    toastr.warning("Informe o CEP");
-                }
-
-
-                var cidade = document.getElementById("cidade");
-                if (cidade.value === "-1") {
-                    error = true;
-                    toastr.warning("Selecione a Cidade");
-                }
-
-
-                var bairro = document.getElementById("bairro");
-                if (bairro.value == "") {
-                    error = true;
-                    toastr.warning("Informe o Bairro");
-                }
-
-
-                var rua = document.getElementById("rua");
-                if (rua.value == "") {
-                    error = true;
-                    toastr.warning("Informe a Rua");
-                }
-
-                var numero = document.getElementById("numero");
-                if (numero.value == "" || numero.value < 1) {
-                    error = true;
-                    toastr.warning("Informe um Número válido");
-                }
-
-
-                var celular = document.getElementById("celular");
-                if (celular.value == "") {
-                    error = true;
-                    toastr.warning("Informe o Celular");
-                }
-
-                var email = document.getElementById("email");
-                if (email.value == "") {
-                    error = true;
-                    toastr.warning("Informe o Email");
-                }
-
-                if (!error) {
-                    alert("Dentista Cadastrado !");
-                }
-
-                return !error;
-            });
-
-        });
-
-
-
-    </script>
-
-</body>
-
-</html>
+                </script>
+            </body>
+            </html>
