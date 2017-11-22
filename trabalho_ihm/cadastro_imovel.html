@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,31 +12,32 @@
     <link rel="stylesheet" href="assets/style/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Imóveis Vale do Aço</title>
     <style>
-    .mt-1 {
-        margin-top: 10px;
-    }
+        .mt-1 {
+            margin-top: 10px;
+        }
 
-    .mt-2 {
-        margin-top: 20px;
-    }
+        .mt-2 {
+            margin-top: 20px;
+        }
 
-    .mt-3 {
-        margin-top: 30px;
-    }
+        .mt-3 {
+            margin-top: 30px;
+        }
 
-    .mt-4 {
-        margin-top: 40px;
-    }
+        .mt-4 {
+            margin-top: 40px;
+        }
 
-    .mt-5 {
-        margin-top: 50px;
-    }
+        .mt-5 {
+            margin-top: 50px;
+        }
 
-    .mt-6 {
-        margin-top: 60px;
-    }
-</style>
+        .mt-6 {
+            margin-top: 60px;
+        }
+    </style>
 </head>
+
 <body>
     <header id="app-top">
         <nav class="navbar" style="box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1);">
@@ -57,10 +59,10 @@
                     <hr class="navbar-divider" />
                     <a class="navbar-item" href="/logout">
                         <i class="fa fa-power-off"></i> &nbsp
-                        
+
                         <strong>Sair</strong>
                         &nbsp (Anakin Skywalker)
-                        
+
                     </a>
                 </div>
             </div>
@@ -73,7 +75,7 @@
                         <div id="moreDropdown" class="navbar-dropdown">
                             <a class="navbar-item " href="#">
                                 <i class="fa fa-power-off"></i> &nbsp
-                                
+
                                 <strong>Sair</strong>
                             </a>
                         </div>
@@ -85,32 +87,32 @@
     <div style="margin: auto 30px">
         <div class="mt-4">
             <div class="columns">
-                                    <!-- <aside class="column menu-container box is-2 is-hidden-mobile"><p class="menu-label">
+                <!-- <aside class="column menu-container box is-2 is-hidden-mobile"><p class="menu-label">
                         Menu
                     </p><ul class="menu"><li class="menu-item"><a href="index.html">
                                 Imóveis
                             </a></li></ul></aside> -->
-                            <section class="column h-system is-12" style="margin-top: -12px">
-                                <section>
-                                    <a href="index.html">
-                                        <span class="title">
-                                            Imóveis - Novo Anúncio
-                                        </span>
-                                    </a>
-                                    
-                                    
-                                </section>
-                                <section class="section">
-                                   
+                <section class="column h-system is-12" style="margin-top: -12px">
+                    <section>
+                        <a href="index.html">
+                            <span class="title">
+                                Imóveis - Novo Anúncio
+                            </span>
+                        </a>
 
-<form id="form">
+
+                    </section>
+                    <section class="section">
+
+
+                        <form id="form">
                             <section class="is-grouped">
                                 <!--  FORMULARIO  -->
 
 
                                 <div class="field is-horizontal">
                                     <div class="field-label is-normal">
-                                        <label id="lNome" class="label">Nome
+                                        <label id="lNome" class="label">Título
                                             <span class="has-text-danger">*</span>
                                         </label>
                                     </div>
@@ -118,175 +120,158 @@
                                     <div class="field-body">
 
                                         <p class="field control">
-                                            <input class="input" id="nome" type="text" name="nome" value="" data-label="lNome" />
+                                            <input class="input" id="titulo" type="text" name="nome" value="" data-label="lNome" />
                                         </p>
                                     </div>
                                 </div>
 
+                                <div class="box">
 
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lCro" class="label">CRO
-                                            <span class="has-text-danger">*</span>
-                                        </label>
+                                    <p class="subtitle">Dados de Endereço</p>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lNome" class="label">Tipo
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="field-body">
+
+                                            <div class="field is-narrow">
+                                                <div class="control">
+                                                    <label class="radio">
+                                                        <input type="radio" name="tipo"> Casa
+                                                    </label>
+                                                    <label class="radio">
+                                                        <input type="radio" name="tipo"> Apartamento
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
 
-                                    <div class="field-body">
 
-                                        <p class="field control">
-                                            <input class="input" id="cro" type="text" name="cro" value="" data-label="lCro" />
-                                        </p>
-                                    </div>
-                                </div>
-                                <br>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lNome" class="label">Cidade
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
 
+                                        <div class="field-body">
+                                            <div class="select is-fullwidth">
+                                                <select id="cidade">
+                                                    <option value="-1">Selecione uma Cidade</option>
+                                                    <option>Coronel Fabriciano</option>
+                                                    <option>Timoteo</option>
+                                                    <option>Ipatinga</option>
 
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lCEP" class="label">CEP
-                                            <span class="has-text-danger">*</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="CEP" type="text" name="CEP" value="" data-label="lCEP" />
-                                        </p>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lNome" class="label">Cidade
-                                            <span class="has-text-danger">*</span>
-                                        </label>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="field-body">
-                                        <div class="select is-fullwidth">
-                                            <select id="cidade">
-                                                <option value="-1">Selecione uma Cidade</option>
-                                                <option>Coronel Fabriciano</option>
-                                                <option>Timoteo</option>
-                                                <option>Ipatinga</option>
 
-                                            </select>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lBairro" class="label">Bairro
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="field-body">
+
+                                            <p class="field control">
+                                                <input class="input" id="bairro" type="text" name="bairro" value="" data-label="lBairro" />
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lRua" class="label">Rua
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="field-body">
+
+                                            <p class="field control">
+                                                <input class="input" id="rua" type="text" name="rua" value="" data-label="lRua" />
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lNumero" class="label">Número
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="field-body">
+
+                                            <p class="field control">
+                                                <input class="input" id="numero" type="number" value="" data-label="lNumber" />
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lComplemento" class="label">Complemento</label>
+                                        </div>
+
+                                        <div class="field-body">
+
+                                            <p class="field control">
+                                                <input class="input" id="complemento" type="text" name="complemento" value="" data-label="lComplemento" />
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
 
 
+                                <div class="box">
 
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lBairro" class="label">Bairro
-                                            <span class="has-text-danger">*</span>
-                                        </label>
+                                    <p class="subtitle">Dados do Imóvel</p>
+
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lCelular" class="label">Área (m²)
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
+
+                                        <div class="field-body">
+
+                                            <p class="field control">
+                                                <input class="input" id="area" type="number" min="0" name="celular" value="" data-label="lCelular" />
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <div class="field-body">
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label id="lCelular" class="label">Nº de quartos
+                                                <span class="has-text-danger">*</span>
+                                            </label>
+                                        </div>
 
-                                        <p class="field control">
-                                            <input class="input" id="bairro" type="text" name="bairro" value="" data-label="lBairro" />
-                                        </p>
+                                        <div class="field-body">
+
+                                            <p class="field control">
+                                                <input class="input" id="area" type="number" min="0" name="celular" value="" data-label="lCelular" />
+                                            </p>
+                                        </div>
                                     </div>
+
+
                                 </div>
-
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lRua" class="label">Rua
-                                            <span class="has-text-danger">*</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="rua" type="text" name="rua" value="" data-label="lRua" />
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lNumero" class="label">Número
-                                            <span class="has-text-danger">*</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="numero" type="number" value="" data-label="lNumber" />
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lComplemento" class="label">Complemento</label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="complemento" type="text" name="complemento" value="" data-label="lComplemento" />
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <br>
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lResidencial" class="label">Tel. Residencial</label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="residencial" type="text" name="residencial" value="" data-label="lresidencial" />
-                                        </p>
-                                    </div>
-                                </div>
-
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lCelular" class="label">Celular
-                                            <span class="has-text-danger">*</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="celular" type="tel" name="celular" value="" data-label="lCelular" />
-                                        </p>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="field is-horizontal">
-                                    <div class="field-label is-normal">
-                                        <label id="lEmail" class="label">Email
-                                            <span class="has-text-danger">*</span>
-                                        </label>
-                                    </div>
-
-                                    <div class="field-body">
-
-                                        <p class="field control">
-                                            <input class="input" id="email" type="email" name="email" value="" data-label="lEmail" />
-                                        </p>
-                                    </div>
-                                </div>
-                                <br>
 
                                 <!--  FIM FORMULARIO  -->
                             </section>
@@ -319,58 +304,59 @@
 
 
 
-                                </section>
-                            </section>
-                        </div>
-                    </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-6">
+        <div class="container">
+            <div class="container">
+                <div class="has-text-centered">
+                    <p>
+                        <strong>Trabalho IHM &copy; 2017</strong>
+                    </p>
+                    <p>Patrick Dumont - Vitor Ota</p>
                 </div>
-                <footer class="footer mt-6">
-                    <div class="container">
-                        <div class="container">
-                            <div class="has-text-centered">
-                                <p>
-                                    <strong>Trabalho IHM &copy; 2017</strong>
-                                </p>
-                                <p>Patrick Dumont - Vitor Ota</p>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <script src="assets/jquery-3.2.1.min.js"></script>
-                <script src="assets/DataTables/datatables.min.js" />
-                <script src="assets/datatables-bulma/js/dataTables.bulma.min.js" />
-                <script src="assets/toastr/toastr.min.js"></script>
-                <script>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/jquery-3.2.1.min.js"></script>
+    <script src="assets/DataTables/datatables.min.js" />
+    <script src="assets/datatables-bulma/js/dataTables.bulma.min.js" />
+    <script src="assets/toastr/toastr.min.js"></script>
+    <script>
 
-                    document.getElementById('burguer').onclick = function (e) {
-                        this.classList.toggle('is-active');
-                        document.getElementById(this.dataset.target).classList.toggle('is-active');
-                    }
+        document.getElementById('burguer').onclick = function (e) {
+            this.classList.toggle('is-active');
+            document.getElementById(this.dataset.target).classList.toggle('is-active');
+        }
 
-                    $('.table').DataTable({
-                        "responsive": true,
+        $('.table').DataTable({
+            "responsive": true,
 
-                        "columnDefs": [
-                        {
-                            "targets": 'no-sort',
-                            "orderable": false,
-                            "order": []
-                        }
-                        ],
+            "columnDefs": [
+                {
+                    "targets": 'no-sort',
+                    "orderable": false,
+                    "order": []
+                }
+            ],
 
-                        "language": {
-                            "url": "/datatableStrings.json"
-                        }
-                    });
+            "language": {
+                "url": "/datatableStrings.json"
+            }
+        });
 
-                    $('.toggle').click(function (e) {
-                        if ($(this).hasClass("is-primary")) {
-                            $(this).removeClass("is-primary is-selected");
-                        } else {
-                            $(this).addClass("is-primary is-selected");
-                        }
-                    })
+        $('.toggle').click(function (e) {
+            if ($(this).hasClass("is-primary")) {
+                $(this).removeClass("is-primary is-selected");
+            } else {
+                $(this).addClass("is-primary is-selected");
+            }
+        })
 
-                </script>
-            </body>
-            </html>
+    </script>
+</body>
+
+</html>
