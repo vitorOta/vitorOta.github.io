@@ -106,13 +106,30 @@
 					</section>
 					<section class="section">
 						<section class="is-grouped">
+
+
+
+							<div class="field is-horizontal">
+								<div class="field-label">
+									<label class="label">Tipo:</label>
+								</div>
+								<div class="field-body">
+										<div class="field is-grouped">
+                                                <div class="buttons has-addons">
+                                                    <span class="toggle button">Casa</span>
+                                                    <span class="toggle button">Apartamento</span>
+                                                </div>
+                                            </div>
+								</div>
+							</div>
+
+
 							<div class="field is-horizontal">
 								<div class="field-label is-normal">
 									<label id="lNome" class="label">Endereço:
 									</label>
 								</div>
 								<div class="field-body">
-									<div class="field is-grouped-multiline">
 									<div class="select">
 										<select id="cidade">
 											<option>Todas as Cidades</option>
@@ -133,7 +150,7 @@
 										</select>
 									</div>
 
-							 			&nbsp;&nbsp;
+									&nbsp;&nbsp;
 
 
 
@@ -146,47 +163,65 @@
 									</div>
 								</div>
 							</div>
-						</div>
-<!-- 							
-							<div class="field is-horizontal">
-								<div class="field-label is-normal">
-									<label id="lNome" class="label">Tipo:</label>
-								</div>
-								<div class="field-body">
-									<div class="buttons has-addons">
-										<span class="toggle button is-primary is-selected">Casa</span>
-										<span class="toggle button is-primary is-selected">Apartamento</span>
-									</div>
-								</div>
-							</div> -->
 
 
 							<div class="field is-horizontal">
 								<div class="field-label">
-								  <label class="label">Tipo:</label>
+									<label class="label">Nº de Quartos:</label>
 								</div>
 								<div class="field-body">
-								  <div class="field is-grouped-multiline">
-									<div class="control">
-									  <label class="checkbox">
-										<input type="checkbox">
-										Casa
-									  </label>
-									</div>
+									<div class="field is-grouped">
 
-									<div class="control">
-									  <label class="checkbox">
-										<input type="checkbox">
-										Apartamento
-									  </label>
+										<div class="control">
+											<input class="input" type="number" placeholder="Mínimo" min="0">
+										</div>
+
+
+										<div class="control">
+											<input class="input" type="number" placeholder="Máximo" min="0">
+										</div>
 									</div>
-								  </div>
 								</div>
-							  </div>
+							</div>
+
+
+							<div class="field is-horizontal">
+								<div class="field-label">
+									<label class="label">Área (m²):</label>
+								</div>
+								<div class="field-body">
+									<div class="field is-grouped">
+
+										<div class="control">
+											<input class="input" type="number" placeholder="Mínimo" min="0">
+										</div>
+
+
+										<div class="control">
+											<input class="input" type="number" placeholder="Máximo" min="0">
+										</div>
+									</div>
+								</div>
+							</div>
 
 
 
-
+							<div class="field is-horizontal">
+								<div class="field-label">
+									<label class="label">Quero:</label>
+								</div>
+								
+								
+								
+								<div class="field-body">
+										<div class="field is-grouped">
+                                                <div class="buttons has-addons">
+                                                    <span class="toggle button">Alugar</span>
+                                                    <span class="toggle button">Comprar</span>
+                                                </div>
+                                            </div>
+								</div>
+							</div>
 
 
 
@@ -198,9 +233,8 @@
 								<div class="field-body">
 									<div class="field is-grouped">
 										<p class="control">
-											<button class="button is-info">
+											<button class="button is-info is-medium">
 												<i class="fa fa-filter"></i>&nbsp Filtrar
-
 											</button>
 										</p>
 									</div>
@@ -303,7 +337,7 @@
 											</div>
 										</div>
 										<div class="content">
-											Ponto de vigia estratégico
+											Ponto estratégico para monitorar a Terra Média
 
 											<p>
 												<div class="field is-horizontal">
