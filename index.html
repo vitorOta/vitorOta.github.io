@@ -5,33 +5,74 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
 	<title>Vitor Ota - Developer</title>
+
 	<style>
+		* {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		#main {
+			min-height: 80vh;
+		}
+
+		h1 {
+			font-size: 2.5em;
+		}
+
+		.links {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 1.5em
+		}
+
 		#picture {
 			border-radius: 100%;
+		}
+
+		.center-horizontal {
+			display: flex;
+			justify-content: center;
+		}
+
+		.center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 	</style>
 </head>
 
 <body>
 
-	<div style="display:flex; justify-content:center; align-items:center">
+	<div id="main" class="center">
 		<div>
-			<figure>
+			<figure class="center-horizontal">
 				<img id="picture" src="https://avatars1.githubusercontent.com/u/11984263?v=3&s=200" alt="Vitor Ota">
 			</figure>
-			<h1 style="display:flex; justify-content:center;">Vitor Ota</h1>
-			<div style="display:flex; flex-direction:row; justify-content: center">
-				<a href="https://br.linkedin.com/in/vitor-ota" target="_blank"><span class="icon"><i
-							class="fab fa-linkedin"></i></span>
-					<span>LinkedIn</span></a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="https://github.com/vitorOta" target="_blank"><span class="icon"><i
-							class="fab fa-github"></i></span> <span>GitHub</span></a>
+			<h1 class="center-horizontal">Vitor Ota</h1>
+			<div class="links">
+				<a href="https://br.linkedin.com/in/vitor-ota" target="_blank">
+					<i class="fab fa-linkedin"></i> LinkedIn
+				</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://github.com/vitorOta" target="_blank">
+					<i class="fab fa-github"></i> GitHub
+				</a>
 			</div>
 		</div>
 	</div>
+	<small>
+		<p class="center-horizontal">I'll make a better page.</p>
+		<p class="center-horizontal">Someday.</p>
+	</small>
 </body>
 
 <script>
