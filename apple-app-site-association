@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID":"27E9959VWR.com.localiza.mobile",
+        "paths":["*"]				
+      }
+    ]
+  }
+}
