@@ -22,19 +22,19 @@
 		h1 {
 			font-size: 2.3em;
 		}
+      
+      .item_link{
+      		color:black;
+			text-decoration: none;
+			font-size: 1.3em;
+			margin:1vw;
+      }
 
 		.links {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
-		}
-
-		a {
-			color:black;
-			text-decoration: none;
-			font-size: 1.3em;
-			margin:1vw;
 		}
 
 		#picture {
@@ -51,6 +51,15 @@
 			justify-content: center;
 			align-items: center;
 		}
+      
+      .hidden_link{
+      		color:white;
+      }
+      
+      .hidden_link:hover, .hidden_link:active{
+      		color:black;
+      }
+      
 	</style>
 </head>
 
@@ -63,15 +72,15 @@
 			</figure>
 			<h1 class="center-horizontal">Vitor Ota</h1>
 			<div class="links">
-				<a href="https://br.linkedin.com/in/vitor-ota" target="_blank">
+				<a class="item_link" href="https://br.linkedin.com/in/vitor-ota" target="_blank">
 					<i class="fab fa-linkedin"></i> LinkedIn
 				</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="https://github.com/vitorOta" target="_blank">
+				<a class="item_link" href="https://github.com/vitorOta" target="_blank">
 					<i class="fab fa-github"></i> GitHub
 				</a>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<a href="mailto:ota.vitor@gmail.com" target="_blank">
+				<a class="item_link" href="mailto:ota.vitor@gmail.com" target="_blank">
 					<i class="fas fa-at"></i> E-mail
 				</a>	
 			</div>
@@ -80,6 +89,7 @@
 	<small>
 		<p class="center-horizontal">I'll make a better page.</p>
 		<p class="center-horizontal">Someday.</p>
+         <p class="center-horizontal"><a class="hidden_link" href="https://vitorota.com/applink">AppLink</a></p>
 	</small>
 </body>
 
